@@ -1,0 +1,22 @@
+MUSAT-BURCEA Adrian 322CB - PA Tema 2
+
+Problema 4:
+    Citesc numarul de piste, numarul de masini si numarul de antrenamente.
+    Dupa citesc cate doua intrenamente, previous si current pentru a determina
+    performanta fiecarei masini. Verific mai intai rezultatele de pe prima
+    pista (primul nr de masina din fiecare antrenament). Daca acestea sunt
+    egale inseamna ca nu ne ofera informatii despre ordinea a doua masini.
+    Daca cele doua numere sunt diferite inseamna ca avem o relatie de ordine
+    intre doua masini si construim pe baza acesteia un arc pe care il adaugam
+    intr-un graf orientat. In cazul in care cele doua numere erau egale,
+    mergeam la verificarea rezultatelor de pe a doua pista (al doilea nr de
+    masina de pe fiecare rand) si tot asa pana dam de o relatie de ordine 
+    intre doua masini. Dupa terminarea citirii, avem un un graf orientat in
+    care fiecare arc reprezinta o relatie de ordine intre doua masini.
+    Pentru a afla ordinea finala a performantelor masinilor, aplicam o sortare
+    topologica pe acest graf. Algoritmul pentru sortarea topologica este cel
+    din laborator. 
+    Complexitate temporala: O(a * n) pt citire, O(m + a) pt topsort, deci
+                    O(a * n + m), a = nr de antrenamente
+                                  n = nr de piste
+                                  m = nr de masini
